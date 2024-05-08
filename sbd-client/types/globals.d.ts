@@ -14,3 +14,22 @@ type MonthLabel =
   | 'Octubre'
   | 'Noviembre'
   | 'Diciembre';
+
+interface APODObject {
+  copyright: string;
+  date: string;
+  explanation: string;
+  hdurl: string;
+  media_type: 'image' | 'video';
+  thumbnail_url?: string;
+  service_version: string;
+  title: string;
+  url: string;
+}
+
+interface DayObject {
+  day: number;
+  month: number;
+  year: number;
+  apod: APODObject | null;
+}

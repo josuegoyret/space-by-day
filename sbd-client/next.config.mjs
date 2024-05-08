@@ -1,4 +1,15 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        hostname: 'apod.nasa.gov'
+      },
+      {
+        hostname: 'img.youtube.com'
+      }
+    ]
+  }
+};
 
 export default nextConfig;
