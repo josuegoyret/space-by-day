@@ -83,3 +83,15 @@ export const getNextMonthInfo = ({
   const nextMonthDaysArray = getNextMonthDaysArray({ nextMonthNumberOfDays });
   return { nextMonthDaysArray, nextMonthNumberOfDays };
 };
+
+export const getFormattedDate = ({ year, month, day }: { year: number; month: number; day: number }): string => {
+  const date = new Date(year, month, day);
+  const _year = date.getFullYear();
+  const _month = String(date.getMonth() + 1).padStart(2, '0'); // padStart to make sure is two digits
+  const _day = String(date.getDate()).padStart(2, '0');
+  return `${_year}-${_month}-${_day}`;
+};
+
+export const formatDate = ({ year, month, day }: { year: number; month: number; day: number }): string => {
+  return new Intl.DateTimeFormat('es-AR').format(new Date(year, month, day));
+};
