@@ -2,6 +2,7 @@ import { getMonthlyAPOD } from '@/actions/calendar.action';
 import { YEAR } from '@/lib/config';
 import { getCurrentMonthInfo, getFormattedDate, getLastMonthInfo, getNextMonthInfo } from '@/utils/date.util';
 import Calendar from '@/components/ui/calendar/Calendar';
+import CalendarNavigator from '../calendar-navigator/CalendarNavigator';
 
 interface MonthPageProps {
   month: MonthIndex;
@@ -59,8 +60,8 @@ const MonthPage = async ({ month }: MonthPageProps) => {
   );
 
   return (
-    <main className='flex min-h-screen flex-col items-center px-2 md:px-8 py-24 w-full max-w-screen-2xl mx-auto'>
-      <h1 className='text-3xl font-bold py-8'>The Space By Day🌌🚀👩🏼‍🚀</h1>
+    <main className='flex min-h-screen flex-col gap-12 md:gap-20 items-center px-2 md:px-8 py-24 w-full max-w-screen-2xl mx-auto'>
+      <CalendarNavigator month={month} />
       <Calendar allDaysArray={allDaysArray} month={month} />
     </main>
   );
