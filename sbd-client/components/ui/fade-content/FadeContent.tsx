@@ -9,8 +9,8 @@ const FadeContent = ({ revealDate }: { revealDate: string }) => {
         </div>
       </div>
       <div className='flex items-center justify-center p-1 md:p-2 absolute inset-0 bg-white opacity-0 transition-all duration-200 ease-in-out group-hover:opacity-100'>
-        <p className='block lg:hidden text-center text-xs'>Público el {revealDate.split('/').slice(0, 2).join('/')}</p>
-        <p className='hidden lg:block text-center text-base'>A revelarse el {revealDate}</p>
+        <p className='block lg:hidden text-center text-xs'>Revealed {revealDate.split('/').slice(0, 2).join('/')}</p>
+        <p className='hidden lg:block text-center text-base'>Revealed on {revealDate}</p>
       </div>
     </div>
   );
