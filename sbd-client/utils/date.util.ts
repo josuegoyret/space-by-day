@@ -1,3 +1,5 @@
+import { YEAR } from '@/lib/config';
+
 export const getMonthNumberOfDays = ({ month, year }: { month: MonthIndex; year: number }): number => {
   return new Date(year, month + 1, 0).getDate();
 };
@@ -103,7 +105,14 @@ export const validateMonth = ({ month: _month }: { month: string }) => {
 };
 
 export const validateDay = ({ month, day }: { month: MonthIndex; day: string }) => {
+  // check if is in the future
+  const now = new Date();
+  const dayDate = new Date(YEAR, month, Number(day));
+  const isInTheFuture = now < dayDate;
+
+  // check if is impossible
   const monthNumberOfDays = getMonthNumberOfDays({ month, year: 2024 });
-  const isValid = Number(day) > 0 && Number(day) <= monthNumberOfDays;
-  return { isValid, day: Number(day) };
+  const isPossible = Number(day) > 0 && Number(day) <= monthNumberOfDays;
+
+  return { isValid: !isInTheFuture && isPossible, day: Number(day) };
 };

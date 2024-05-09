@@ -16,7 +16,7 @@ type MonthLabel =
   | 'December';
 
 interface APODObject {
-  copyright: string;
+  copyright?: string;
   date: string;
   explanation: string;
   hdurl: string;

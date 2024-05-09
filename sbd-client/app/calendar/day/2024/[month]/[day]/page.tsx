@@ -1,3 +1,4 @@
+import DayPage from '@/components/day-page/DayPage';
 import { YEAR } from '@/lib/config';
 import { getFormattedDate, validateDay, validateMonth } from '@/utils/date.util';
 import { notFound } from 'next/navigation';
@@ -12,7 +13,8 @@ const DayByParamPage = ({ params }: DayByParamPageProps) => {
   const { isValid: isValidDay, day } = validateDay({ month, day: params.day });
   if (!isValidDay) notFound();
   const dayDate = new Date(YEAR, month, day);
-  return <div>{getFormattedDate({ date: dayDate })}</div>;
+  const currentDate = getFormattedDate({ date: dayDate });
+  return <DayPage date={currentDate} />;
 };
 
 export default DayByParamPage;
