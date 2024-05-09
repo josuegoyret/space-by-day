@@ -84,8 +84,7 @@ export const getNextMonthInfo = ({
   return { nextMonthDaysArray, nextMonthNumberOfDays };
 };
 
-export const getFormattedDate = ({ year, month, day }: { year: number; month: number; day: number }): string => {
-  const date = new Date(year, month, day);
+export const getFormattedDate = ({ date }: { date: Date }): string => {
   const _year = date.getFullYear();
   const _month = String(date.getMonth() + 1).padStart(2, '0'); // padStart to make sure is two digits
   const _day = String(date.getDate()).padStart(2, '0');

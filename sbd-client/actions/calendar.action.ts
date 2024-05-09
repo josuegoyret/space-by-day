@@ -9,14 +9,16 @@ interface GetMonthlyAPODValue {
 }
 
 export const getMonthlyAPOD = async ({
-  startDate,
-  endDate
+  rangeStart,
+  rangeEnd,
+  hourlyRevalidation
 }: {
-  startDate: string;
-  endDate: string;
+  rangeStart: string;
+  rangeEnd: string;
+  hourlyRevalidation: boolean;
 }): Promise<GetMonthlyAPODValue> => {
   try {
-    const data = await getAPODByRange({ startDate, endDate });
+    const data = await getAPODByRange({ rangeStart, rangeEnd, hourlyRevalidation });
     return { success: true, message: 'APOD by range successfully achieved', data };
   } catch (error: any) {
     return { success: false, message: error.message || 'APOD by range successfully achieved', data: [] };
