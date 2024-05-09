@@ -11,7 +11,19 @@ const config: Config = {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))'
+      },
+      colors: {
+        'nasa-blue': '#0032a0',
+        'nasa-red': '#e4002b',
+        'nasa-black': '#000000',
+        'nasa-white': '#ffffff',
+        'nasa-gray': '#959599'
       }
+    },
+    fontFamily: {
+      display: ['Inter', 'Arial', 'sans-serif'],
+      body: ['Public Sans', 'Arial', 'sans-serif'],
+      label: ['DM MONO', 'Arial', 'monospace']
     }
   },
   plugins: []

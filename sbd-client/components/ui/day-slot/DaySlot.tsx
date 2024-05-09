@@ -22,7 +22,7 @@ const DaySlot = ({ slot, first, month: calendarMonth }: DaySlotProps) => {
     >
       {slot.apod && src && (
         <Image
-          className={`object-cover -z-50 group-hover:scale-150 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 md:group-hover:scale-115 md:group-hover:translate-x-2 md:group-hover:-translate-y-2 transition-all ease-in-out duration-100`}
+          className={`object-cover -z-50 group-hover:scale-150 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 md:group-hover:scale-110 md:group-hover:translate-x-2 md:group-hover:-translate-y-2 transition-all ease-in-out duration-300`}
           src={src}
           fill
           sizes='(max-width: 1536px) 15vw, 220px'
@@ -35,9 +35,9 @@ const DaySlot = ({ slot, first, month: calendarMonth }: DaySlotProps) => {
         />
       )}
       <div
-        className={`flex flex-col items-center p-1 ${slot.apod ? 'text-white bg-gradient-to-b from-gray-950 group-hover:opacity-0' : ''} transition-all ease-in-out duration-100`}
+        className={`flex flex-col items-center p-1 ${slot.apod ? 'text-white bg-gradient-to-b from-gray-950 group-hover:opacity-0' : ''} transition-all ease-in-out duration-300`}
       >
-        <div className='p-1 w-full text-center'>{slot.day}</div>
+        <div className='p-1 w-full text-center font-semibold font-label'>{slot.day}</div>
         <div className='aspect-square w-full min-h-20 flex justify-center items-center p-1'>
           {!slot.apod ? (
             <FadeContent revealDate={revealDate} />
