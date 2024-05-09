@@ -1,4 +1,5 @@
 import MonthPage from '@/components/month-page/MonthPage';
+import { validateMonth } from '@/utils/date.util';
 import { notFound } from 'next/navigation';
 
 interface MonthPageProps {
@@ -7,8 +8,9 @@ interface MonthPageProps {
 
 // responsible of display MonthPage for the given month in params
 const MonthByParamPage = ({ params }: MonthPageProps) => {
-  if (!(Number(params.month) >= 1 && Number(params.month) <= 12)) notFound();
-  const month = (Number(params.month) - 1) as MonthIndex;
+  const { isValid, month } = validateMonth({ month: params.month });
+  if (!isValid) notFound();
+
   return <MonthPage month={month} />;
 };
 

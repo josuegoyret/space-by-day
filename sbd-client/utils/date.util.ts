@@ -94,3 +94,16 @@ export const getFormattedDate = ({ date }: { date: Date }): string => {
 export const formatDate = ({ year, month, day }: { year: number; month: number; day: number }): string => {
   return new Intl.DateTimeFormat('es-AR').format(new Date(year, month, day));
 };
+
+export const validateMonth = ({ month: _month }: { month: string }) => {
+  let isValid = true;
+  if (!(Number(_month) >= 1 && Number(_month) <= 12)) isValid = false;
+  const month = (Number(_month) - 1) as MonthIndex;
+  return { isValid, month };
+};
+
+export const validateDay = ({ month, day }: { month: MonthIndex; day: string }) => {
+  const monthNumberOfDays = getMonthNumberOfDays({ month, year: 2024 });
+  const isValid = Number(day) > 0 && Number(day) <= monthNumberOfDays;
+  return { isValid, day: Number(day) };
+};
