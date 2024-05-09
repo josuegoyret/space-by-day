@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .blue-square:active,
+  .blue-square:focus {
+    outline: 0.25rem solid #2491ff;
+  }
+}
+
 :root {
   /* define variables here */
 }
