@@ -3,14 +3,15 @@ import HeaderPresentation from '../header-presentation/HeaderPresentation';
 
 interface CalendarProps {
   allDaysArray: DayObject[];
+  month: MonthIndex;
 }
 
 // responsible for rendering header and content of a monthly calendar
-const Calendar = async ({ allDaysArray }: CalendarProps) => {
+const Calendar = async ({ allDaysArray, month }: CalendarProps) => {
   return (
     <div className='w-full'>
       <HeaderPresentation />
-      <MonthContent allDaysArray={allDaysArray} />
+      <MonthContent allDaysArray={allDaysArray} month={month} />
     </div>
   );
 };
