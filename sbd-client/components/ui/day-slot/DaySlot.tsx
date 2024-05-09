@@ -13,6 +13,7 @@ const DaySlot = ({ slot, first, month: calendarMonth }: DaySlotProps) => {
   const { year, month, day } = slot;
   const revealDate = formatDate({ year, month, day });
   const isCurrentMonth = calendarMonth === month;
+  const alt = `${slot.apod?.title} ${slot.apod?.copyright ? `by ${slot.apod.copyright}` : ''}`;
 
   return (
     <div className={`relative overflow-hidden ${first ? 'border-t border-l' : ''}`}>
@@ -25,7 +26,7 @@ const DaySlot = ({ slot, first, month: calendarMonth }: DaySlotProps) => {
           // since we are showing up 7 images per row, for mobile and desktop, a 15vw as download size will work;
           // for larger screens, such as monitors, the width will be constrained by a 1536px max-width, so
           // a 220px fixed size will work;
-          alt={`${slot.apod.title} by ${slot.apod.copyright}`}
+          alt={alt}
           quality={50}
         />
       )}
