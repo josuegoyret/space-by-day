@@ -21,7 +21,12 @@ const DaySlot = ({ slot, first, month: calendarMonth }: DaySlotProps) => {
           className={`object-cover ${!isCurrentMonth ? 'grayscale' : ''}`}
           src={src}
           fill
+          sizes='(max-width: 1536px) 15vw, 220px'
+          // since we are showing up 7 images per row, for mobile and desktop, a 15vw as download size will work;
+          // for larger screens, such as monitors, the width will be constrained by a 1536px max-width, so
+          // a 220px fixed size will work;
           alt={`${slot.apod.title} by ${slot.apod.copyright}`}
+          quality={50}
         />
       )}
       <div className={`flex flex-col items-center p-1`}>
