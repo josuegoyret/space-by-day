@@ -9,6 +9,15 @@ const nextConfig = {
         hostname: 'img.youtube.com'
       }
     ]
+  },
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/calendar/month',
+        permanent: true
+      }
+    ];
   }
 };
 
