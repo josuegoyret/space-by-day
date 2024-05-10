@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Public_Sans } from 'next/font/google';
 import './globals.css';
+import Navbar from '@/components/ui/navbar/Navbar';
 
 const public_sans = Public_Sans({ subsets: ['latin'] });
 
@@ -16,7 +17,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={public_sans.className}>{children}</body>
+      <body className={public_sans.className}>
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
