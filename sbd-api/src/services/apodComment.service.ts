@@ -10,6 +10,7 @@ class APODCommentService {
 	getAll = async ({ apodDate }: { apodDate: string }): Promise<APODCommentModel[]> => {
 		const apodComments = await this.model.findAll({
 			where: { apodDate },
+			order: [['createdAt', 'DESC']],
 		});
 		return apodComments;
 	};
