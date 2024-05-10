@@ -33,3 +33,10 @@ interface DayObject {
   year: number;
   apod: APODObject | null;
 }
+
+interface PhotoComment {
+  id: string;
+  content: string;
+  createdAt: string;
+  updatedAt: string;
+}
