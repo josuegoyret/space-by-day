@@ -1,6 +1,6 @@
 'use server';
 
-import { API_URL } from '@/lib/config';
+import { createAPODComment } from '@/services/apod-comment.service';
 import { revalidatePath } from 'next/cache';
 import { z } from 'zod';
 
@@ -43,13 +43,7 @@ export const addAPODComment = async (
   const { content } = validatedFields.data;
 
   try {
-    const res = await fetch(`${API_URL}/apod-comment`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ content, apodDate })
-    });
+    const res = await createAPODComment({ content, apodDate });
     if (!res.ok)
       return {
         message: 'Error while adding comment',
