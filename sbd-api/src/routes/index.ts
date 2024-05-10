@@ -1,13 +1,8 @@
-import { Request, Response, Router } from 'express';
+import { Router } from 'express';
+import apodCommentRouter from './apodComment.route';
 
 const router = Router();
 
-router.use('/', async (req: Request, res: Response) => {
-	try {
-		return res.status(200).send('Hello there.- owk');
-	} catch (error: any) {
-		return res.status(error.status || 500).send(error.message || 'Error while getting salutation');
-	}
-});
+router.use('/apod-comment', apodCommentRouter);
 
 export default router;

@@ -1,5 +1,6 @@
 import { Sequelize } from 'sequelize';
 import { CUSTOM_NODE_ENV, databaseConfig, nodeEnvs } from './lib/config';
+import APODCommentDefine from './models/APODComment.model';
 
 const sequelize =
 	CUSTOM_NODE_ENV === nodeEnvs.local
@@ -28,5 +29,6 @@ const sequelize =
 			});
 
 // tables
+export const APODComment = APODCommentDefine(sequelize);
 
 export const conn = sequelize;
