@@ -20,7 +20,6 @@ const APODCommentDefine = (sequelize: Sequelize) => {
 			},
 			apodDate: {
 				type: DataTypes.STRING,
-				unique: true,
 				allowNull: false,
 			},
 			content: {
