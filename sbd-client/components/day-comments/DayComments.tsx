@@ -31,7 +31,7 @@ const DayComments = ({ date }: DayCommentsProps) => {
   ];
   return (
     <section className="w-full flex flex-col gap-8 md:gap-10'">
-      <CommentForm />
+      <CommentForm apodDate={date} />
       <CommentsList comments={comments} />
     </section>
   );
