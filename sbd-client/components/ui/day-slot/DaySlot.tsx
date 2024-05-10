@@ -34,7 +34,6 @@ const DaySlot = ({ slot, first, month: calendarMonth }: DaySlotProps) => {
             // a 220px fixed size will work;
             alt={alt}
             quality={50}
-            priority // all images are displayed on screen at once, so shouldn't be lazy loaded
           />
         )}
         <div
