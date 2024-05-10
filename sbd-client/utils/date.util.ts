@@ -93,8 +93,8 @@ export const getFormattedDate = ({ date }: { date: Date }): string => {
   return `${_year}-${_month}-${_day}`;
 };
 
-export const formatDate = ({ year, month, day }: { year: number; month: number; day: number }): string => {
-  return new Intl.DateTimeFormat('es-AR').format(new Date(year, month, day));
+export const formatDate = ({ date }: { date: Date }): string => {
+  return new Intl.DateTimeFormat('es-AR').format(date);
 };
 
 export const validateMonth = ({ month: _month }: { month: string }) => {

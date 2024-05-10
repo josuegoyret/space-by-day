@@ -13,7 +13,7 @@ interface DaySlotProps {
 const DaySlot = ({ slot, first, month: calendarMonth }: DaySlotProps) => {
   const src = slot.apod?.media_type === 'video' ? slot.apod?.thumbnail_url : slot.apod?.url;
   const { year, month, day } = slot;
-  const revealDate = formatDate({ year, month, day });
+  const revealDate = formatDate({ date: new Date(year, month, day) });
   const isCurrentMonth = calendarMonth === month;
   const linkToDetailPage = isCurrentMonth && slot.apod ? `/calendar/day/2024/${slot.month + 1}/${slot.day}` : undefined;
   const alt = `${slot.apod?.title} ${slot.apod?.copyright ? `by ${slot.apod.copyright}` : ''}`;

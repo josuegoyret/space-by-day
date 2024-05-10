@@ -15,6 +15,7 @@ const config: Config = {
       colors: {
         'nasa-blue': '#0032a0',
         'nasa-red': '#e4002b',
+        'nasa-red-dark': '#b50909',
         'nasa-black': '#000000',
         'nasa-white': '#ffffff',
         'nasa-gray': '#959599'
