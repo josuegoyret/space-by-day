@@ -60,7 +60,10 @@ const MonthPage = async ({ month }: MonthPageProps) => {
   );
 
   return (
-    <main className='flex min-h-screen flex-col gap-12 md:gap-20 items-center px-2 md:px-8 py-24 w-full max-w-screen-2xl mx-auto'>
+    <main
+      id='calendar'
+      className='flex min-h-screen flex-col gap-12 md:gap-20 items-center px-2 md:px-8 py-24 w-full max-w-screen-2xl mx-auto'
+    >
       <CalendarNavigator month={month} />
       <Calendar allDaysArray={allDaysArray} month={month} />
     </main>

@@ -19,6 +19,10 @@ const config: Config = {
         'nasa-black': '#000000',
         'nasa-white': '#ffffff',
         'nasa-gray': '#959599'
+      },
+      height: {
+        '128': '32rem',
+        '160': '40rem'
       }
     },
     fontFamily: {

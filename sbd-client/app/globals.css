@@ -7,10 +7,18 @@
   .blue-square:focus {
     outline: 0.25rem solid #2491ff;
   }
+
+  .hero-gradient {
+    background: linear-gradient(65.99deg, #000 0, transparent 99.04%);
+  }
 }
 
 :root {
   /* define variables here */
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
