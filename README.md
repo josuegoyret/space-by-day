@@ -5,6 +5,8 @@
 Explore the universe, one photo at the time: The Space By Day shares the Astronomy Picture of the Day
 (APOD), curated by NASA's microservice. Access the APOD explanation by selecting a date in the calendar. This project results in a personal exercise for mastering performance and accessibility techniques in Next.js web apps with server side rendering.
 
+_Note: the project language is English as it follows the NASA's style_
+
 ## Project Structure
 
 The project is divided into two main directories:
