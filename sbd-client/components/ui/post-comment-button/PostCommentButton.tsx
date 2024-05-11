@@ -7,7 +7,7 @@ import LoaderIcon from '../library/icons/LoaderIcon';
 const PostCommentButton = () => {
   const { pending } = useFormStatus();
   return (
-    <PrimaryButton type='submit' className='flex items-center justify-center gap-2 w-48'>
+    <PrimaryButton aria-label='post comment' type='submit' className='flex items-center justify-center gap-2 w-48'>
       {pending && <LoaderIcon size='20' />}
       Post Comment
     </PrimaryButton>
