@@ -1,4 +1,4 @@
-import DaySlot from '../day-slot/DaySlot';
+import DaySlot from '../../day-slot/DaySlot';
 
 interface MonthContentProps {
   allDaysArray: DayObject[];

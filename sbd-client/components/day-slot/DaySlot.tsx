@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import FadeContent from '../fade-content/FadeContent';
+import FadeContent from '../ui/fade-content/FadeContent';
 import styles from './DaySlot.module.scss';
-import DaySlotWrapper from '../day-slot-wrapper/DaySlotWrapper';
+import DaySlotWrapper from '../ui/day-slot-wrapper/DaySlotWrapper';
 import { formatDate } from '@/utils/date.util';
 
 interface DaySlotProps {

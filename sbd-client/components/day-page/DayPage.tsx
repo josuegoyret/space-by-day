@@ -1,5 +1,5 @@
 import { getDailyAPOD } from '@/actions/calendar.action';
-import DayDetail from '../day-detail/DayDetail';
+import DayDetail from '../ui/day-detail/DayDetail';
 import DayComments from '../day-comments/DayComments';
 
 interface DayPageProps {
