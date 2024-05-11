@@ -7,8 +7,8 @@ import Footer from '@/components/ui/footer/Footer';
 const public_sans = Public_Sans({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Space by day',
-  description: 'Descubre el universo un día a la vez'
+  title: 'The Space By Day',
+  description: 'Explore the universe a day at the time'
 };
 
 export default function RootLayout({
