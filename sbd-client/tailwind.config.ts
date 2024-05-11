@@ -26,9 +26,24 @@ const config: Config = {
       }
     },
     fontFamily: {
-      display: ['Inter', 'Arial', 'sans-serif'],
-      body: ['Public Sans', 'Arial', 'sans-serif'],
-      label: ['DM MONO', 'Arial', 'monospace']
+      display: [
+        '"Inter", sans-serif',
+        {
+          fontFeatureSettings: '"hern"'
+        }
+      ],
+      body: [
+        '"Public Sans", sans-serif',
+        {
+          fontFeatureSettings: '"hern"'
+        }
+      ],
+      label: [
+        '"DM MONO", monospace',
+        {
+          fontFeatureSettings: '"hern"'
+        }
+      ]
     }
   },
   plugins: []
