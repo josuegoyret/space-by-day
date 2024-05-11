@@ -17,7 +17,15 @@ const DayDetail = ({ apod }: DayDetailProps) => {
         </h1>
       </div>
       <figure className='flex flex-col gap-4 md:gap-6'>
-        <Image src={src} width={712} height={480} alt={`Image for date: ${apod.date}`} quality={100} priority />
+        <Image
+          src={src}
+          width={712}
+          height={480}
+          alt={`Image for date: ${apod.date}`}
+          quality={100}
+          priority
+          sizes='(max-width: 768px) 100vw, 712px'
+        />
         <figcaption className='text-sm text-nasa-gray text-start'>
           {apod.copyright ? `Photo by ${apod.copyright}` : 'Public domain photo'}
         </figcaption>
