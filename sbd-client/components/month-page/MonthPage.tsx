@@ -8,7 +8,7 @@ interface MonthPageProps {
   month: MonthIndex;
 }
 
-// responsible of retrieve the data and calculate the days to display
+// responsible of retrieving the data and calculate the days to display
 const MonthPage = async ({ month }: MonthPageProps) => {
   // calculate days to display
   const { lastMonthDaysArray } = getLastMonthInfo({ month, year: 2024 });
@@ -22,12 +22,15 @@ const MonthPage = async ({ month }: MonthPageProps) => {
   // retrieve apod data if necessary
   const now = new Date();
   let apodRange: APODObject[] = [];
+
   const startMonth = lastMonthDaysArray.length ? month - 1 : month;
   const startDay = concatenatedDaysArray[0];
   const startDate = new Date(YEAR, startMonth, startDay);
+
   const endMonth = nextMonthDaysArray.length ? month + 1 : month;
   const endDay = concatenatedDaysArray[concatenatedDaysArray.length - 1];
   const endDate = new Date(YEAR, endMonth, endDay);
+
   const isCalendarCompleted = now > endDate;
   const isCalendarEmpty = now < startDate;
   const isCalendarRunning = !isCalendarCompleted && !isCalendarEmpty;

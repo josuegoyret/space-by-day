@@ -6,7 +6,7 @@ interface MonthPageProps {
   params: { month: string };
 }
 
-// responsible of display MonthPage for the given month in params
+// responsible of displaying MonthPage for the given month in params
 const MonthByParamPage = ({ params }: MonthPageProps) => {
   const { isValid, month } = validateMonth({ month: params.month });
   if (!isValid) notFound();
