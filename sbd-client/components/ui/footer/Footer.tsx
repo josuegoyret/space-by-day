@@ -16,7 +16,7 @@ const Footer = () => {
           <div className='flex flex-col gap-4 max-w-xs'>
             <div className='flex flex-col gap-2'>
               <p className='text-sm font-label'>Inspired by</p>
-              <h3 className='text-xl font-display font-bold'>The National Aeronautics and Space Administration</h3>
+              <p className='text-xl font-display font-bold'>The National Aeronautics and Space Administration</p>
             </div>
             <p className='text-nasa-gray leading-tight'>
               One of the most popular websites at NASA is the Astronomy Picture of the Day. In fact, this website is one
